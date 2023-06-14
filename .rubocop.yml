@@ -3,6 +3,8 @@ AllCops:
   Exclude:
     - "Guardfile"
     - "Rakefile"
+    - "main.rb"
+    - "app.rb"
     - "node_modules/**/*"
 
   DisplayCopNames: true
