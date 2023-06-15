@@ -77,6 +77,7 @@ class MusicAlbumUI
   end
 
   def load_music_album
+    begin
     if File.exist?(@music_album_store.music_album_file)
       music_albums = music_album_store.file_read(@music_album_store.music_album_file)
     end
@@ -88,4 +89,11 @@ class MusicAlbumUI
       create_music_album(album['publish_date'], album['on_spotify'], genre)
     end
   end
+rescue JSON::ParserError => e
+  puts "Error parsing JSON file: #{e.message}"
+rescue Errno::ENOENT => e
+  puts "File not found: #{e.message}"
+rescue => e
+  puts "An error occurred: #{e.message}"
+end
 end

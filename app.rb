@@ -1,10 +1,20 @@
 require 'fileutils'
 require_relative './musicAlbum/music_album_ui'
+require_relative 'book_ui'
 require 'JSON'
 
 class App
   def initialize
+    @book = BookUI.new
     @music = MusicAlbumUI.new
+  end
+
+  def list_books
+    @book.list_books
+  end
+
+  def add_book
+    @book.add_book
   end
 
   def list_music_albums
