@@ -49,8 +49,20 @@ class BookUI
     save_book_data
 
     puts 'Book added successfully.'
+    add_label
   end
 
+  def add_label
+    puts 'Enter Title:'
+    title = gets.chomp
+    puts 'Enter Color:'
+    color = gets.chomp
+
+    new_label = Label.new(title, color)
+    @label_data << new_label
+    save_label_data
+  end
+  
   def load_book_data
     begin
       if File.exist?(@book_store.book_file)
@@ -72,8 +84,15 @@ class BookUI
         file_contents = File.read(@label_store.label_file)
         @label_data = JSON.parse(file_contents).map { |label_data| Label.new(label_data['title'], label_data['color']) }
       end
+    rescue JSON::ParserError => e
+      puts "Error parsing JSON file: #{e.message}"
+    rescue Errno::ENOENT => e
+      puts "File not found: #{e.message}"
+    rescue => e
+      puts "An error occurred: #{e.message}"
     end
   end
+
 
   def save_book_data
     File.open(@book_store.book_file, 'w') do |file|
@@ -81,5 +100,13 @@ class BookUI
     end
   rescue => e
     puts "Error saving book data: #{e.message}"
+  end
+
+  def save_label_data
+    File.open(@label_store.label_file, 'w') do |file|
+      file.write(JSON.generate(@label_data.map(&:to_json)))
+    end
+    rescue => e
+      puts "Error saving book data: #{e.message}"
   end
 end
