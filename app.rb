@@ -1,6 +1,6 @@
 require 'fileutils'
-require_relative './musicAlbum/music_album_ui'
 require_relative 'book_ui'
+require_relative './musicAlbum/music_album_ui'
 require 'JSON'
 
 class App
@@ -13,10 +13,6 @@ class App
     @book.list_books
   end
 
-  def add_book
-    @book.add_book
-  end
-
   def list_music_albums
     @music.list_music_album
   end
@@ -27,5 +23,13 @@ class App
 
   def add_music_album
     @music.add_music_album
+  end
+
+  def list_labels
+    @book.list_labels
+  end
+
+  def add_book
+    @book.add_book
   end
 end

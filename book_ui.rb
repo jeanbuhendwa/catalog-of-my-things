@@ -1,6 +1,7 @@
 require_relative 'book'
 require_relative 'label'
 require_relative 'book_store'
+require_relative 'label_store'
 require 'json'
 
 class BookUI
@@ -8,9 +9,11 @@ class BookUI
 
   def initialize
     @book_store = BookStore.new
+    @label_store = LabelStore.new
     @book_data = []
-    @label = []
+    @label_data = []
     load_book_data
+    load_label_data
   end
 
   def list_books
@@ -18,7 +21,17 @@ class BookUI
       puts 'There are no books yet.'
     else
       @book_data.each_with_index do |book, index|
-        puts "#{index}) Id: #{book.id}, Publisher: #{book.publisher}, Publish Date: #{book.publish_date}"
+        puts "#{index}) Id: #{book.id}, Publisher: #{book.publisher}, Cover State: #{book.cover_state} Publish Date: #{book.publish_date}"
+      end
+    end
+  end
+
+  def list_labels
+    if @label_data.empty?
+      puts 'There are no labels yet.'
+    else
+      @label_data.each_with_index do |label, index|
+        puts "#{index}) Id: #{label.id}, Title: #{label.title}, Color: #{label.color}"
       end
     end
   end
@@ -53,29 +66,20 @@ class BookUI
     end
   end
 
+  def load_label_data
+    begin
+      if File.exist?(@label_store.label_file)
+        file_contents = File.read(@label_store.label_file)
+        @label_data = JSON.parse(file_contents).map { |label_data| Label.new(label_data['title'], label_data['color']) }
+      end
+    end
+  end
+
   def save_book_data
     File.open(@book_store.book_file, 'w') do |file|
       file.write(JSON.generate(@book_data.map(&:to_json)))
     end
   rescue => e
     puts "Error saving book data: #{e.message}"
-  end
-end
-
-class Book
-  attr_reader :publisher, :cover_state, :publish_date
-
-  def initialize(publisher, cover_state, publish_date)
-    @publisher = publisher
-    @cover_state = cover_state
-    @publish_date = publish_date
-  end
-
-  def to_json
-    {
-      'publisher' => @publisher,
-      'cover_state' => @cover_state,
-      'publish_date' => @publish_date
-    }
   end
 end
