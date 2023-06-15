@@ -17,7 +17,7 @@ end
 
 public
 
-def handle_option(option, app)
+def handle_option(option, app) # rubocop:disable Metrics/CyclomaticComplexity
   case option
   when 1
     app.list_books
@@ -44,13 +44,13 @@ def handle_option(option, app)
 end
 
 def main
-  #   app = App.new
+  app = App.new
   status = true
 
   while status
     run_option
     option = gets.chomp.to_i
-    handle_option(option)
+    status = handle_option(option, app)
     status = false if option == 10
   end
 end
