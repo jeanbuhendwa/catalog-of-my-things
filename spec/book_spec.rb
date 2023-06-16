@@ -9,7 +9,7 @@ RSpec.describe Book do
       expect(test_method).to eq(true)
     end
   end
-      
+
   describe '#can_be_archived?' do
     it 'returns false if parent returns false' do
       book = Book.new('No Starch Press', 'good', '2022-01-01')
