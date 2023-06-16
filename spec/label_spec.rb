@@ -12,4 +12,13 @@ RSpec.describe Label do
       expect(label.items).to include(item)
     end
   end
+
+  describe '#to_json' do
+    it 'returns a JSON representation of the object' do
+      label = Label.new('color', 'green')
+      check = label.to_json
+      expected_result = { 'id' => label.id, 'title' => 'color', 'color' => 'green' }
+      expect(check).to eq(expected_result)
+    end
+  end
 end

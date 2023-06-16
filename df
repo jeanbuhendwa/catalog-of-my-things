@@ -1,0 +1,181 @@
+[33mcommit dd062c06228b6156aa449f2fd1238b7d9aa810a6[m[33m ([m[1;36mHEAD -> [m[1;32mDev[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Dev[m[33m)[m
+Author: evillaz <evillaz123@gmail.com>
+Date:   Fri Jun 16 09:45:33 2023 -0500
+
+    correct linters
+
+[33mcommit c8c782a9cf5449a309a61bbdb5f40720d945c316[m
+Author: evillaz <evillaz123@gmail.com>
+Date:   Fri Jun 16 09:38:39 2023 -0500
+
+    Update schema.sql
+
+[33mcommit cdf5d4eacc7b99ab12b8e99deef6a65a27bf715d[m
+Author: evillaz <evillaz123@gmail.com>
+Date:   Fri Jun 16 09:30:22 2023 -0500
+
+    Created item class unit tests
+
+[33mcommit b96f8ba51e474036a807cfe33da0a7fdef80f680[m
+Author: evillaz <evillaz123@gmail.com>
+Date:   Fri Jun 16 09:23:31 2023 -0500
+
+    Remove looping welcome message
+
+[33mcommit 0b29cb14033eef3f3f94dfbc311455773f4e270d[m
+Author: evillaz <evillaz123@gmail.com>
+Date:   Fri Jun 16 09:19:42 2023 -0500
+
+    Update preserved data directory
+
+[33mcommit 96ffe0915f08cab1e56b7051137972658163549a[m
+Author: evillaz <evillaz123@gmail.com>
+Date:   Fri Jun 16 09:18:28 2023 -0500
+
+    Delete asd
+
+[33mcommit eb8518eb151eef15da8bbc4eb21fd92cafa68686[m
+Author: evillaz <evillaz123@gmail.com>
+Date:   Fri Jun 16 09:18:02 2023 -0500
+
+    Create asd
+
+[33mcommit 5e5034abb0adb6649ed589a8971d04f3ec3a5fe9[m
+Author: evillaz <evillaz123@gmail.com>
+Date:   Fri Jun 16 09:16:55 2023 -0500
+
+    Correct game app tests
+
+[33mcommit cf99210008d2f08b2a798356a2df130550040c02[m
+Author: evillaz <evillaz123@gmail.com>
+Date:   Fri Jun 16 09:16:36 2023 -0500
+
+    Corrections on item class
+
+[33mcommit 2bb3614fe184104636be3344780a357ac226d9d2[m
+Author: evillaz <evillaz123@gmail.com>
+Date:   Fri Jun 16 09:15:41 2023 -0500
+
+    Add a message for a created game
+
+[33mcommit 58080e0e0664edabea797dd4c0f2cc404b25b705[m
+Author: jeanbuhendwa <jeanjacquesirenge40@gmail.com>
+Date:   Fri Jun 16 14:01:28 2023 +0200
+
+    Make the changes as requested for main.rb and music test
+
+[33mcommit 8b75a000af91ec999e8b26ce39f7f796a3d764fc[m
+Author: jeanbuhendwa <jeanjacquesirenge40@gmail.com>
+Date:   Fri Jun 16 14:00:39 2023 +0200
+
+    Update item
+
+[33mcommit aaecb33d769839856bf2fdb6f13b9093cf5ab273[m
+Author: jeanbuhendwa <jeanjacquesirenge40@gmail.com>
+Date:   Fri Jun 16 11:16:25 2023 +0200
+
+    fix linters
+
+[33mcommit 0d05b0a8278d03f2beca9b993b0bea1685312925[m
+Author: Eduardo Villarreal <evillaz123@gmail.com>
+Date:   Fri Jun 16 04:02:44 2023 -0500
+
+    Update main.rb
+
+[33mcommit 32daf783ae6c39905d517e15e72070bdca11b6b7[m
+Author: Eduardo Villarreal <evillaz123@gmail.com>
+Date:   Fri Jun 16 03:22:38 2023 -0500
+
+    Update README.md
+
+[33mcommit 15c6a497f658adc20a63a5b1038d5bd998276c1b[m
+Author: Eduardo Villarreal <evillaz123@gmail.com>
+Date:   Fri Jun 16 03:21:14 2023 -0500
+
+    Update LICENSE
+
+[33mcommit 4ab208812d383a56f7ffcdd7139f3141859fbd2d[m
+Author: Eduardo Villarreal <evillaz123@gmail.com>
+Date:   Fri Jun 16 03:20:51 2023 -0500
+
+    Update README.md
+
+[33mcommit 16a8437a16ca951bde592e1ada3645f5b9dc5812[m
+Author: Eduardo Villarreal <evillaz123@gmail.com>
+Date:   Fri Jun 16 03:20:04 2023 -0500
+
+    Update README.md
+
+[33mcommit 91a88cd79fd2917d4227aa44311ae38d869383f3[m
+Author: evillaz <evillaz123@gmail.com>
+Date:   Fri Jun 16 03:19:34 2023 -0500
+
+    Create logo1.png
+
+[33mcommit 093da41865ec95d99dfa3394f45e95b4f49b22e0[m
+Author: Eduardo Villarreal <evillaz123@gmail.com>
+Date:   Fri Jun 16 03:18:09 2023 -0500
+
+    Update README.md
+
+[33mcommit 1c811aed621b1c1a87f0f3c3a9fa97c989027199[m
+Author: Atril33 <118503473+Atril33@users.noreply.github.com>
+Date:   Fri Jun 16 12:56:21 2023 +0500
+
+    Fixed Issue & Update schema.sql File
+
+[33mcommit c876cc4aa5d8d61b9eae38467715b1d82db04f15[m
+Author: Atril33 <118503473+Atril33@users.noreply.github.com>
+Date:   Fri Jun 16 12:19:52 2023 +0500
+
+    Add All Tests IN spec Folder
+
+[33mcommit 0613f5264a41274e195c09894ea9646ab09ce1da[m
+Merge: 1d49ba4 0268648
+Author: Jean Jacques Buhendwa <jeanjacquesirenge40@gmail.com>
+Date:   Fri Jun 16 08:58:36 2023 +0200
+
+    Merge pull request #25 from jeanbuhendwa/music-album
+    
+    Music album
+
+[33mcommit 1d49ba4ae15ce6b77ce2693be1276edb71a602c4[m
+Merge: 9171d25 b933d93
+Author: Jean Jacques Buhendwa <jeanjacquesirenge40@gmail.com>
+Date:   Fri Jun 16 08:58:08 2023 +0200
+
+    Merge pull request #23 from jeanbuhendwa/game-author
+    
+    Game author
+
+[33mcommit b933d930647b4a679a6c629e3c88f5dad8032157[m[33m ([m[1;31morigin/game-author[m[33m)[m
+Merge: 80a3c77 9171d25
+Author: Jean Jacques Buhendwa <jeanjacquesirenge40@gmail.com>
+Date:   Fri Jun 16 08:57:34 2023 +0200
+
+    Merge branch 'Dev' into game-author
+
+[33mcommit 0268648b13ec7851d7878245986269a34761563f[m[33m ([m[1;31morigin/music-album[m[33m)[m
+Merge: a30dc43 9171d25
+Author: Jean Jacques Buhendwa <jeanjacquesirenge40@gmail.com>
+Date:   Fri Jun 16 08:53:43 2023 +0200
+
+    Merge branch 'Dev' into music-album
+
+[33mcommit a30dc43623eaf1ff975837ae94e8198716c8d445[m
+Author: jeanbuhendwa <jeanjacquesirenge40@gmail.com>
+Date:   Fri Jun 16 08:52:30 2023 +0200
+
+    fix linters
+
+[33mcommit 92e3cb2bbf44450557e93a90c86466d10e03a470[m
+Author: jeanbuhendwa <jeanjacquesirenge40@gmail.com>
+Date:   Fri Jun 16 08:50:10 2023 +0200
+
+    update json
+
+[33mcommit 15419c040c264a3c7a215423360ffb981e4de402[m
+Author: jeanbuhendwa <jeanjacquesirenge40@gmail.com>
+Date:   Fri Jun 16 08:49:46 2023 +0200
+
+    Add schema.sql

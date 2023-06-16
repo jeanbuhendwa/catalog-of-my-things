@@ -17,4 +17,18 @@ RSpec.describe Book do
       expect(test_method).to eq(false)
     end
   end
+
+  describe '#to_json' do
+    it 'returns a JSON representation of the object' do
+      book = Book.new('test', 'bad', '2020-02-27')
+      check = book.to_json
+      result = {
+        'id' => book.id,
+        'publisher' => 'test',
+        'cover_state' => 'bad',
+        'publish_date' => book.publish_date
+      }
+      expect(check).to eq(result)
+    end
+  end
 end
