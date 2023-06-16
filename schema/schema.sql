@@ -1,18 +1,16 @@
 -- Create Item Table--
 CREATE TABLE Item (
   id INT PRIMARY KEY,
-  genre VARCHAR(200),
-  author VARCHAR(200),
-  source VARCHAR(200),
-  label VARCHAR(200),
+  genre INT,
+  author INT,
+  label INT,
   publish_date DATE,
   archived BOOLEAN DEFAULT false,
   can_be_archived BOOLEAN,
   move_to_archive BOOLEAN,
-  add_genre INT REFERENCES Genre(id),
-  add_source INT REFERENCES Source(id),
-  add_author INT REFERENCES Author(id),
-  add_label INT REFERENCES Label(id)
+  FOREIGN KEY (genre) REFERENCES genre(id),
+  FOREIGN KEY (author) REFERENCES author(id),
+  FOREIGN KEY (label) REFERENCES label(id)
 );
 
 --Create games table--
@@ -66,6 +64,9 @@ CREATE TABLE label (
   color VARCHAR(20)
 );
 
+CREATE INDEX idx_item_genre_id ON games (genre);
+CREATE INDEX idx_item_author_id ON games (author);
+CREATE INDEX idx_item_label_id ON games (label);
 CREATE INDEX idx_games_author_id ON games (author_id);
 CREATE INDEX idx_musicalbum_genre_id ON musicalbum (genre_id);
 CREATE INDEX idx_book_label_id ON book (label_id);
