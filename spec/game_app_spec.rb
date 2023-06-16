@@ -1,8 +1,24 @@
 require 'rspec'
 require_relative '../game_app'
+require 'fileutils'
 
 RSpec.describe GameApp do
   let(:game_app) { GameApp.new }
+  before(:context) do
+    file_path = File.expand_path('../gameAuthor/games.json', __dir__)
+    puts "File path: #{file_path}"
+
+    if File.exist?(file_path)
+      begin
+        FileUtils.rm_f(file_path)
+        puts 'File deleted successfully'
+      rescue StandardError => e
+        puts "Error deleting file: #{e.message}"
+      end
+    else
+      puts 'File does not exist'
+    end
+  end
 
   describe '#create_author' do
     it 'creates a new author object' do
@@ -167,6 +183,22 @@ RSpec.describe GameApp do
       expect(game_app.authors.last).to be_a(Author)
       expect(game_app.authors.last.first_name).to eq('Eduardo')
       expect(game_app.authors.last.last_name).to eq('Villarreal')
+    end
+  end
+
+  after(:context) do
+    file_path = File.expand_path('../gameAuthor/games.json', __dir__)
+    puts "File path: #{file_path}"
+
+    if File.exist?(file_path)
+      begin
+        FileUtils.rm_f(file_path)
+        puts 'File deleted successfully'
+      rescue StandardError => e
+        puts "Error deleting file: #{e.message}"
+      end
+    else
+      puts 'File does not exist'
     end
   end
 end
