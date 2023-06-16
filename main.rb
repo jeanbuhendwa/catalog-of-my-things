@@ -1,7 +1,6 @@
 require_relative './app'
 
 def run_option
-  puts 'Welcome to our App console!'
   puts 'Kindly choose an option'
   puts '1-:List all books'
   puts '2-:List all music albums'
@@ -55,6 +54,7 @@ end
 
 def main
   app = App.new
+  puts 'Welcome to our App console!'
   status = true
 
   while status
