@@ -47,7 +47,7 @@ end
 def main
   app = App.new
   status = true
-  
+
   while status
     run_option
     option = gets.chomp.to_i

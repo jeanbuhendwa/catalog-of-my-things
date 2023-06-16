@@ -8,6 +8,7 @@ class App
   def initialize
     @game = GameApp.new
     @music = MusicAlbumUI.new
+    @book = BookUI.new
   end
 
   def list_games
