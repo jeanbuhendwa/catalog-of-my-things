@@ -2,6 +2,29 @@ require 'rspec'
 require_relative '../Book/book'
 
 RSpec.describe Book do
+  let(:publisher) { 'Sample Publisher' }
+  let(:cover_state) { 'good' }
+  let(:publish_date) { '2023-01-01' }
+
+  describe '#initialize' do
+    it 'assigns a random ID' do
+      book = Book.new(publisher, cover_state, publish_date)
+      expect(book.id).to be_an(Integer)
+      expect(book.id).to be >= 1
+      expect(book.id).to be <= 1000
+    end
+
+    it 'assigns the provided publisher' do
+      book = Book.new(publisher, cover_state, publish_date)
+      expect(book.publisher).to eq(publisher)
+    end
+
+    it 'assigns the provided cover state' do
+      book = Book.new(publisher, cover_state, publish_date)
+      expect(book.cover_state).to eq(cover_state)
+    end
+  end
+
   describe '#can_be_archived?' do
     it 'returns true if parent returns true' do
       book = Book.new('No Starch Press', 'good', '2001-01-01')
