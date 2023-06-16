@@ -51,7 +51,9 @@ After you're finished please remove all the comments and instructions!
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
+<!--
 - [❓ FAQ (OPTIONAL)](#faq)
+-->
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -250,7 +252,7 @@ I would like to thank microverse for the opportunity on working each other as co
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
+<!-- FAQ (optional) 
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
@@ -263,6 +265,7 @@ I would like to thank microverse for the opportunity on working each other as co
   - First i tried to address each one of the requirements and solve them individually to keep integrating them as i was progressing.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+-->
 
 <!-- LICENSE -->
 
