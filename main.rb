@@ -21,22 +21,31 @@ def handle_option(option, app) # rubocop:disable Metrics/CyclomaticComplexity
   case option
   when 1
     app.list_books
+    true
   when 2
     app.list_music_albums
+    true
   when 3
     app.list_games
+    true
   when 4
     app.list_genres
+    true
   when 5
     app.list_labels
+    true
   when 6
     app.list_authors
+    true
   when 7
     app.add_book
+    true
   when 8
     app.add_music_album
+    true
   when 9
     app.add_game
+    true
   when 10
     puts 'Thanks You!!...'
     app.preserve_data
