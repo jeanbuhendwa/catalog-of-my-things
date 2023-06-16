@@ -77,15 +77,21 @@ class MusicAlbumUI
   end
 
   def load_music_album
-    if File.exist?(@music_album_store.music_album_file)
-      music_albums = music_album_store.file_read(@music_album_store.music_album_file)
-    end
-    return unless music_albums
+    return unless File.exist?(@music_album_store.music_album_file)
 
-    music_albums.each do |album|
-      genre = @genre.find { |obj| obj.name == album['genre'] }
-      genre ||= create_genre(album['genre'])
-      create_music_album(album['publish_date'], album['on_spotify'], genre)
-    end
+    music_albums = music_album_store.file_read(@music_album_store.music_album_file)
+    return if music_albums.nil? || music_albums.empty?
+
+    music_albums.each { |album| process_album(album) }
+  rescue JSON::ParserError => e
+    puts "Error parsing JSON file: #{e.message}"
+  rescue Errno::ENOENT => e
+    puts "File not found: #{e.message}"
+  end
+
+  def process_album(album)
+    genre = @genre.find { |obj| obj.name == album['genre'] }
+    genre ||= create_genre(album['genre'])
+    create_music_album(album['publish_date'], album['on_spotify'], genre)
   end
 end
