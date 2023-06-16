@@ -39,6 +39,7 @@ def handle_option(option, app) # rubocop:disable Metrics/CyclomaticComplexity
     app.add_game
   when 10
     puts 'Thanks You!!...'
+    app.preserve_data
     false
   end
 end
@@ -46,7 +47,7 @@ end
 def main
   app = App.new
   status = true
-
+  
   while status
     run_option
     option = gets.chomp.to_i

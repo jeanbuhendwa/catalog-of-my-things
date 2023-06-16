@@ -1,10 +1,29 @@
 require 'fileutils'
+require_relative './game_app'
 require_relative './Book/book_ui'
 require_relative './musicAlbum/music_album_ui'
 require 'JSON'
 
 class App
   def initialize
+    @game = GameApp.new
+    @music = MusicAlbumUI.new
+  end
+
+  def list_games
+    @game.list_games
+  end
+
+  def list_authors
+    @game.list_authors
+  end
+
+  def add_game
+    @game.add_game
+  end
+
+  def preserve_data
+    @game.preserve_data
     @book = BookUI.new
     @music = MusicAlbumUI.new
   end
