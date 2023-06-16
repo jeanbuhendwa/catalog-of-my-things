@@ -34,10 +34,10 @@ RSpec.describe GameApp do
   describe '#create_game' do
     it 'creates a new game object' do
       allow(game_app).to receive(:game_inputs).and_return({
-                                                                publish_date: '2023/06',
-                                                                multiplayer: 'yes',
-                                                                last_played_at: '2023/06/10'
-                                                              })
+                                                            publish_date: '2023/06',
+                                                            multiplayer: 'yes',
+                                                            last_played_at: '2023/06/10'
+                                                          })
 
       game = game_app.create_game
 
@@ -51,9 +51,9 @@ RSpec.describe GameApp do
   describe '#create_author' do
     it 'creates a new author object' do
       allow(game_app).to receive(:author_inputs).and_return({
-                                                                  first_name: 'Eduardo',
-                                                                  last_name: 'Villarreal'
-                                                                })
+                                                              first_name: 'Eduardo',
+                                                              last_name: 'Villarreal'
+                                                            })
 
       author = game_app.create_author
 
