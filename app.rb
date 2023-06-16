@@ -1,5 +1,6 @@
 require 'fileutils'
 require_relative './game_app'
+require_relative './Book/book_ui'
 require_relative './musicAlbum/music_album_ui'
 require 'JSON'
 
@@ -23,6 +24,12 @@ class App
 
   def preserve_data
     @game.preserve_data
+    @book = BookUI.new
+    @music = MusicAlbumUI.new
+  end
+
+  def list_books
+    @book.list_books
   end
 
   def list_music_albums
@@ -35,5 +42,13 @@ class App
 
   def add_music_album
     @music.add_music_album
+  end
+
+  def list_labels
+    @book.list_labels
+  end
+
+  def add_book
+    @book.add_book
   end
 end
