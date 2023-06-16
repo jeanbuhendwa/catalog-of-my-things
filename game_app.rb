@@ -65,7 +65,7 @@ class GameApp
                @authors[selected - 1]
              end
     add_author_game(author, game)
-    puts "Game and author added succesfully"
+    puts 'Game and author added succesfully'
     preserve_data
   end
 
