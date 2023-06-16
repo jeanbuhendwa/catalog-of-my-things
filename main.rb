@@ -38,13 +38,11 @@ def handle_option(option, app) # rubocop:disable Metrics/CyclomaticComplexity
     true
   when 7
     app.add_book
-    true
+
   when 8
     app.add_music_album
-    true
   when 9
     app.add_game
-    true
   when 10
     puts 'Thanks You!!...'
     app.preserve_data
@@ -54,9 +52,8 @@ end
 
 def main
   app = App.new
-  puts 'Welcome to our App console!'
   status = true
-
+  puts 'Welcome to our App console!'
   while status
     run_option
     option = gets.chomp.to_i
