@@ -4,11 +4,11 @@ require_relative '../game_app'
 RSpec.describe GameApp do
   let(:game_app) { GameApp.new }
 
-  describe '#get_game_inputs' do
+  describe '#game_inputs' do
     it 'returns a hash with game inputs' do
       allow(game_app).to receive(:get_input).and_return('2023/06', 'yes', '2023/06/10')
 
-      inputs = game_app.get_game_inputs
+      inputs = game_app.game_inputs
 
       expect(inputs).to eq({
                              publish_date: '2023/06',
@@ -18,11 +18,11 @@ RSpec.describe GameApp do
     end
   end
 
-  describe '#get_author_inputs' do
+  describe '#author_inputs' do
     it 'returns a hash with author inputs' do
       allow(game_app).to receive(:get_input).and_return('Eduardo', 'Villarreal')
 
-      inputs = game_app.get_author_inputs
+      inputs = game_app.author_inputs
 
       expect(inputs).to eq({
                              first_name: 'Eduardo',
@@ -33,7 +33,7 @@ RSpec.describe GameApp do
 
   describe '#create_game' do
     it 'creates a new game object' do
-      allow(game_app).to receive(:get_game_inputs).and_return({
+      allow(game_app).to receive(:game_inputs).and_return({
                                                                 publish_date: '2023/06',
                                                                 multiplayer: 'yes',
                                                                 last_played_at: '2023/06/10'
@@ -50,7 +50,7 @@ RSpec.describe GameApp do
 
   describe '#create_author' do
     it 'creates a new author object' do
-      allow(game_app).to receive(:get_author_inputs).and_return({
+      allow(game_app).to receive(:author_inputs).and_return({
                                                                   first_name: 'Eduardo',
                                                                   last_name: 'Villarreal'
                                                                 })
