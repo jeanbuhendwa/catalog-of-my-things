@@ -203,7 +203,7 @@ Visual studio code or with the very own ruby ird
 👤 **Jean Jacques Buhendwa**
 
 - GitHub: [@githubhandle](https://github.com/jeanbuhendwa)
-- Twitter: [@JeanjacqueI]([https://twitter.com/MbaleKagheni](https://twitter.com/JeanjacqueI))
+- Twitter: [@JeanjacqueI](https://twitter.com/JeanjacqueI)
 - LinkedIn: [Jean Jacques (John) Buhendwa](https://www.linkedin.com/in/johnbuhendwa/)
 
 👤 **Syed Atril**
