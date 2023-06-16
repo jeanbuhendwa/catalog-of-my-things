@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../book'
+require_relative '../Book/book'
 
 RSpec.describe Book do
   describe '#can_be_archived?' do

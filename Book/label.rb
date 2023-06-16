@@ -17,7 +17,7 @@ class Label
     {
       'id' => @id,
       'title' => @title,
-      'color' => @color,
+      'color' => @color
     }
   end
 end

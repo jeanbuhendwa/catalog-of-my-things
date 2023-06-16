@@ -4,7 +4,7 @@ class LabelStore
   attr_reader :label_file
 
   def initialize
-    @label_file = File.expand_path('./label.json',__dir__)
+    @label_file = File.expand_path('./label.json', __dir__)
   end
 
   def file_read(filename)
@@ -21,5 +21,5 @@ class LabelStore
     label_store = file.read(@label_file) if File.exist?(@label_file)
     label_store << label_data
     file_write(@label_file, label_store)
-  end    
+  end
 end

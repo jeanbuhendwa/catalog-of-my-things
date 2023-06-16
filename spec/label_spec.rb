@@ -1,6 +1,6 @@
 require 'rspec'
 require_relative '../item'
-require_relative '../label'
+require_relative '../Book/label'
 
 RSpec.describe Label do
   describe '#item_add' do
