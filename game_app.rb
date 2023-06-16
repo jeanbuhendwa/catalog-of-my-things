@@ -8,7 +8,7 @@ class GameApp
   def initialize
     @games = []
     @authors = []
-    @path = './storage/games.json'
+    @path = './gameAuthor/games.json'
     load_data
   end
 
