@@ -1,7 +1,7 @@
 require 'date'
 class Item
-  attr_accessor :genre, :author, :source, :label
-  attr_reader :publish_date, :archived
+  attr_accessor :genre, :author, :source, :label, :publish_date
+  attr_reader :archived
 
   def initialize(date)
     @id = rand(1..300)
@@ -14,8 +14,6 @@ class Item
 
     @archived = true
   end
-
-  private
 
   def can_be_archived?
     ten_years_ago = Date.today - (10 * 365)
