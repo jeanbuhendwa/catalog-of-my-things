@@ -1,5 +1,6 @@
-require '../gameAuthor/author'
-require '../item'
+require 'rspec'
+require_relative '../gameAuthor/author'
+require_relative '../item'
 
 describe Author do
   let(:author) { Author.new('Eduardo', 'Villarreal') }
